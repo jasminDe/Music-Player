@@ -12,12 +12,12 @@ const cover = document.querySelector('#cover')
 //song titles
 const songs =['hey', 'summer', 'ukulele']
 
-// //keep track of songs
+//keep track of songs
 
-// let songIndex = 2
+let songIndex = 2
 
-// //intially load song
-// loadSong(songs[songIndex])
+//intially load song
+loadSong(songs[songIndex])
 
 // //update song details
 // function loadSong(song){
