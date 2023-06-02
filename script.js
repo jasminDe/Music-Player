@@ -9,8 +9,8 @@ const title = document.querySelector('#title')
 const cover = document.querySelector('#cover')
 
 
-// //song titles
-// const songs =['hey', 'summer', 'ukulele']
+//song titles
+const songs =['hey', 'summer', 'ukulele']
 
 // //keep track of songs
 
