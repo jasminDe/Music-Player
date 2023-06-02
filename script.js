@@ -19,12 +19,12 @@ let songIndex = 2
 //intially load song
 loadSong(songs[songIndex])
 
-// //update song details
-// function loadSong(song){
-//     title.innerText = song
-//     audio.src = `music/music-player_music_${song}.mp3`
-//     cover.src =`images/${song}.jpg`
-// }
+//update song details
+function loadSong(song){
+    title.innerText = song
+    audio.src = `music/music-player_music_${song}.mp3`
+    cover.src =`images/${song}.jpg`
+}
 
 // //event listeners
 // playBtn.addEventListener('click' ())
