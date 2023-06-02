@@ -26,5 +26,23 @@ function loadSong(song){
     cover.src =`images/${song}.jpg`
 }
 
-// //event listeners
-// playBtn.addEventListener('click' ())
+function playSong(){
+
+}
+
+function pauseSong(){
+
+}  
+
+
+//event listeners
+playBtn.addEventListener('click', () => {
+    const isPlaying = musicContainer.classList.contains('play')
+
+    if(isPlaying){
+        pauseSong()
+    }else {
+        playSong()
+    }
+
+})
