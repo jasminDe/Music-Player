@@ -1,5 +1,5 @@
-const musicContainer = document.querySelector('.musicContainer')
-const playBtn = document.querySelector('#play')
+const musicContainer = document.querySelector('.music-container')
+const playBtn = document.getElementById('play')
 const prevBtn = document.querySelector('#prev')
 const nextBtn = document.querySelector('#next')
 const audio = document.querySelector('#audio')
@@ -26,8 +26,10 @@ function loadSong(song){
     cover.src =`images/${song}.jpg`
 }
 
-function playSong(){
 
+//play songs
+function playSong(){
+musicContainer.classList.add('play');
 }
 
 function pauseSong(){
@@ -46,3 +48,5 @@ playBtn.addEventListener('click', () => {
     }
 
 })
+
+playSong()
