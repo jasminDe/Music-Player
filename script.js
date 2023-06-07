@@ -7,6 +7,7 @@ const progress = document.querySelector('.progress')
 const progressContainer = document.querySelector('.progress-container')
 const title = document.querySelector('#title')
 const cover = document.querySelector('#cover')
+const muteBtn = document.querySelector('#mute')
 
 
 //song titles
@@ -42,6 +43,28 @@ function pauseSong(){
     playBtn.querySelector('i.fas').classList.add('fa-play')
 
     audio.pause()
+}  
+
+function muteSong(){
+    // const mutedDefaultState = ['fa-volume-off', 'fa-volume-up']
+    // const [rmvIcon, addIcon] = audio.muted ? mutedDefaultState : mutedDefaultState.reverse()
+    // muteBtn.querySelector('i.fa').classList.remove(rmvIcon)
+    // muteBtn.querySelector('i.fa').classList.add(addIcon)
+
+    // audio.muted = !audio.muted
+
+    
+    if(audio.muted){
+        muteBtn.querySelector('i.fa').classList.remove('fa-volume-off')
+        muteBtn.querySelector('i.fa').classList.add('fa-volume-up')
+        audio.muted = false
+
+    }else{
+        muteBtn.querySelector('i.fa').classList.remove('fa-volume-up')
+        muteBtn.querySelector('i.fa').classList.add('fa-volume-off')
+
+        audio.muted = true
+    }
 }  
 
 function prevSong() {
@@ -104,6 +127,8 @@ playBtn.addEventListener('click', () => {
 // change song events
 prevBtn.addEventListener('click', prevSong)
 nextBtn.addEventListener('click', nextSong)
+muteBtn.addEventListener('click', muteSong)
+
 
 audio.addEventListener('timeupdate', updateProgress)
 
